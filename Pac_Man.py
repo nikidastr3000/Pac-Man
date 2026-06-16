@@ -138,7 +138,7 @@ class Game():
         ghost_skins = {}
         for d in directions:
             name = 'yellow_ghost_' + d
-            skin = pygame.image.load(name + ".png")
+            skin = pygame.image.load("data/images/" + name + ".png")
             skin = pygame.transform.scale(skin, (Cell.size, Cell.size))
             ghost_skins[d] = skin
         ghost = Ghost(ghost_skins, Coord(self.settings['ghost_1_spawn_x'], self.settings['ghost_1_spawn_y']))
@@ -147,7 +147,7 @@ class Game():
         ghost_skins = {}
         for d in directions:
             name = 'red_ghost_' + d
-            skin = pygame.image.load(name + ".png")
+            skin = pygame.image.load("data/images/" + name + ".png")
             skin = pygame.transform.scale(skin, (Cell.size, Cell.size))
             ghost_skins[d] = skin
         ghost = Ghost(ghost_skins, Coord(self.settings['ghost_2_spawn_x'], self.settings['ghost_2_spawn_y']))
@@ -156,7 +156,7 @@ class Game():
         ghost_skins = {}
         for d in directions:
             name = 'blue_ghost_' + d
-            skin = pygame.image.load(name + ".png")
+            skin = pygame.image.load("data/images/" + name + ".png")
             skin = pygame.transform.scale(skin, (Cell.size, Cell.size))
             ghost_skins[d] = skin
         ghost = Ghost(ghost_skins, Coord(self.settings['ghost_3_spawn_x'], self.settings['ghost_3_spawn_y']))
