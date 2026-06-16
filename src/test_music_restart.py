@@ -1,0 +1,17 @@
+import pygame
+pygame.init()
+pygame.mixer.init()
+pygame.mixer.music.load("../data/audio/ok-i-pull-up-shorted.mp3")
+pygame.mixer.music.play(-1)
+pygame.time.delay(500)
+pygame.mixer.music.stop()
+print("stopped.")
+print("pos:", pygame.mixer.music.get_pos())
+if pygame.mixer.music.get_pos() == -1:
+    pygame.mixer.music.play(-1)
+    pygame.mixer.music.pause()
+    print("replayed and paused.")
+pygame.time.delay(500)
+print("unpausing.")
+pygame.mixer.music.unpause()
+print("pos:", pygame.mixer.music.get_pos())

@@ -178,7 +178,7 @@ class PacMan(Cell):
         directions = ('', '_left', '_right', '_up', '_down')
         for d in directions:
             name = "pac_man" + d
-            pac_man = pygame.image.load("data/images/" + name + ".png")
+            pac_man = pygame.image.load("../data/images/" + name + ".png")
             pac_man = pygame.transform.scale(pac_man, (Cell.size, Cell.size))
             self.skins[name] = pac_man
         
@@ -311,7 +311,7 @@ class Cherry(Cell):
         self.pos = pos
         self.coord = Coord(globals.game.topleft_x + self.pos.x * Cell.size, globals.game.topleft_y + self.pos.y * Cell.size)
         
-        cherry_skin = pygame.image.load("data/images/cherry.png")
+        cherry_skin = pygame.image.load("../data/images/cherry.png")
         cherry_skin = pygame.transform.scale(cherry_skin, (Cell.size, Cell.size))
         self.skin = cherry_skin
 
